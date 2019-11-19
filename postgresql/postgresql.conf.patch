@@ -1,0 +1,36 @@
+--- postgresql.conf.bk	2019-11-19 08:37:20.543260220 +0900
++++ postgresql.conf	2019-11-19 23:44:01.267489747 +0900
+@@ -56,7 +56,7 @@
+ 
+ # - Connection Settings -
+ 
+-#listen_addresses = 'localhost'		# what IP address(es) to listen on;
++listen_addresses = '*'		# what IP address(es) to listen on;
+ 					# comma-separated list of addresses;
+ 					# defaults to 'localhost'; use '*' for all
+ 					# (change requires restart)
+@@ -662,18 +662,18 @@
+ 					# encoding
+ 
+ # These settings are initialized by initdb, but they can be changed.
+-lc_messages = 'C'			# locale for system error message
++lc_messages = 'ja_JP.UTF-8'			# locale for system error message
+ 					# strings
+-lc_monetary = 'C'			# locale for monetary formatting
+-lc_numeric = 'C'			# locale for number formatting
+-lc_time = 'C'				# locale for time formatting
++lc_monetary = 'ja_JP.UTF-8'			# locale for monetary formatting
++lc_numeric = 'ja_JP.UTF-8'			# locale for number formatting
++lc_time = 'ja_JP.UTF-8'				# locale for time formatting
+ 
+ # default configuration for text search
+-default_text_search_config = 'pg_catalog.english'
++default_text_search_config = 'pg_catalog.simple'
+ 
+ # - Shared Library Preloading -
+ 
+-#shared_preload_libraries = ''	# (change requires restart)
++shared_preload_libraries = ''	# (change requires restart)
+ #local_preload_libraries = ''
+ #session_preload_libraries = ''
+ #jit_provider = 'llvmjit'		# JIT library to use

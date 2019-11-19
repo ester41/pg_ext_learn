@@ -1,0 +1,11 @@
+version: '2'
+services:
+  postgresql:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pg_ext_learn
+    hostname: pg_ext_learn
+    privileged: true
+    ports:
+      - "0.0.0.0:5432:5432"

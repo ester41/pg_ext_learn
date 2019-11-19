@@ -1,0 +1,10 @@
+--- pg_hba.conf.bk	2019-11-19 08:37:12.153127564 +0900
++++ pg_hba.conf	2019-11-19 08:38:37.965483201 +0900
+@@ -79,6 +79,7 @@
+ # "local" is for Unix domain socket connections only
+ local   all             all                                     peer
+ # IPv4 local connections:
++host    all             all             0.0.0./0                md5
+ host    all             all             127.0.0.1/32            ident
+ # IPv6 local connections:
+ host    all             all             ::1/128                 ident

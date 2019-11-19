@@ -1,0 +1,17 @@
+#!/bin/sh
+
+LOG_DIR=/var/lib/pgsql/11/log
+cd $LOG_DIR
+
+DELETE_DAY_LOG=`date +"%Y%m%d" -d '7 days ago'`
+FILE_LIST=$(ls -d $(find `pwd`))
+for FILE in $FILE_LIST
+do
+  if [[ $FILE =~ "postgresql" ]];then
+    FILE_DATE=`expr "$FILE" : ".*[\.\-]\([0-9]\{8\}\).*"`
+    if [ $FILE_DATE -lt $DELETE_DAY_LOG ]; then
+      rm -f $FILE
+    fi
+  fi
+done
+exit 0
