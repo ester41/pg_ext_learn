@@ -2,11 +2,11 @@
 関西DB勉強会用レポジトリ  
 https://kansaidbstudy.connpass.com/event/144933/
 
-# ハンズオン環境について
+## ハンズオン環境について
 参加者の環境を揃えるため、さくらのクラウドを使用します。  
 また、PostgreSQLのインストール状態を揃えるため、Dockerで初期環境を構築するようにします。
 
-# サーバー環境構築(事前準備)
+## サーバー環境構築(事前準備)
 10分くらいで完了します。
 
 1. さくらのクラウドで最低環境のサーバーを用意してください。  
@@ -35,19 +35,19 @@ Windowsユーザーの場合は[Tera Term](https://ja.osdn.net/projects/ttssh2/)
 [root@ホスト名 pg_ext_learn]# 
 ```
 
-# Dockerコンテナ内への入りかた
+## Dockerコンテナ内への入りかた
 ```terminal
 [root@ホスト名 pg_ext_learn]# ./login.sh
 [root@ホスト名 pg_ext_learn]# 
 ```
 
-# Docekrコンテナの再開の仕方
+## Docekrコンテナの再開の仕方
 ```terminal
 [root@ホスト名 pg_ext_learn]# ./start.sh
 [root@ホスト名 pg_ext_learn]# 
 ```
 
-# Dockerコンテナの止め方
+## Dockerコンテナの止め方
 ```terminal
 [root@ホスト名 pg_ext_learn]# ./stop.sh
 [root@ホスト名 pg_ext_learn]# 
